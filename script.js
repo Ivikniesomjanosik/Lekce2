@@ -1,20 +1,26 @@
-let cenaListek = 12;
-let pocetNavstevniku = 174;
-let pocetPredstaveni = 15;
+let listek = 12;
+let navstevnici = 174;
+let predstavenia = 15;
 
-let prijem = cenaListek * pocetNavstevniku * pocetPredstaveni
-document.body.innerHTML += "Mesacny prijem je " + prijem + " EUR";
+let prijem = listek * navstevnici * predstavenia;
 
-let cenaListekStudent = 0.65 * 12;
+let navstevniciMesacne = navstevnici * 15;
 
-document.body.innerHTML += "Studentsky listek stoji " + cenaListekStudent + " EUR";
+let listekstudent = 0.65 * listek;
 
-let pocetNavstevnikuStudentu = 0.4 * 174;
+let navstevniciStudenti = navstevniciMesacne * 0.4;
 
-document.body.innerHTML += "Pocet navstevniku z rad studentu je " + pocetNavstevnikuStudentu;
+let prijemStudenti = navstevniciStudenti * listekstudent;
 
-let prijemStudenti = cenaListekStudent * pocetNavstevnikuStudentu; 
+let beznyNavstevnici = navstevniciMesacne * 0.6;
 
-document.body.innerHTML += "Prijem za studenty je " + prijemStudenti;
+let prijemBezny = beznyNavstevnici * 12;
+
+
+document.body.innerHTML += "Mesačný príjem bez zľavy je: " + prijem + "EUR ";
+
+document.body.innerHTML += "Mesačný príjem so zľavou je: " + (prijemBezny + prijemStudenti) + "EUR";
+
+
 
 
